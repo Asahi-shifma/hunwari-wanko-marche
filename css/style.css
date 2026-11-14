@@ -1,0 +1,329 @@
+:root {
+  --bg-main: #fffdf9;        /* 温かみのあるアイボリー */
+  --bg-alt: #fdf6ec;         /* やわらかいベージュ */
+  --primary: #d97742;        /* 優しいテラコッタ・オレンジ */
+  --primary-hover: #c26330;
+  --text-main: #4a3b32;      /* 柔らかいダークブラウン */
+  --text-sub: #78665c;
+  --border-color: #eedfd0;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Zen Maru Gothic", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.8;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ヘッダー */
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-list a:hover {
+  color: var(--primary);
+}
+
+/* ヒーローセクション */
+.hero {
+  background-color: var(--bg-alt);
+  padding: 5rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.hero p {
+  color: var(--text-sub);
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ボタン共通 */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(217, 119, 66, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: var(--white);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-alt);
+}
+
+.btn-large {
+  padding: 1.1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+.btn-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(220, 39, 67, 0.25);
+}
+
+.btn-instagram:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* セクション共通 */
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--text-sub);
+  margin-bottom: 2.5rem;
+}
+
+/* マルシェについて */
+.about-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-card p + p {
+  margin-top: 1rem;
+}
+
+/* 開催実績 */
+.history-list {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.history-item {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.history-tag {
+  background-color: var(--bg-alt);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.history-date {
+  font-weight: 700;
+  font-size: 1.1rem;
+  min-width: 170px;
+}
+
+.history-title {
+  color: var(--text-sub);
+}
+
+/* 出店者募集ボックス */
+.exhibitor-box {
+  background-color: var(--white);
+  border: 2px dashed var(--primary);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.exhibitor-box p {
+  margin-bottom: 2rem;
+}
+
+.exhibitor-box .note {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+}
+
+/* SNSセクション */
+.sns-container {
+  text-align: center;
+}
+
+.sns-container > p {
+  margin-bottom: 2rem;
+}
+
+.sns-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.sns-account {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-main);
+}
+
+/* フッター */
+.footer {
+  background-color: var(--text-main);
+  color: var(--white);
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.85rem;
+  }
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
